@@ -1,0 +1,9 @@
+After creating the fade effect for the menu icon, I decided to fully finish its functionality. The plan is to create items, which href to the corresponding pages.
+
+I created a container which will hold the menu items, so I can manage and style the elements in a more organized way, it also makes the code, at least in my opinion, more organized.
+
+Once the skeleton of the menu items was built out, I needed to add the fade effect based on the users interaction with the hamburger (menu) icon and the items themselves, and ensure functionality. This was done using JS, since the menu icon and items are seperate, and share seperate characteristics, like ,menu items will be invisible, then visible, while the hamburger icon will be always visible, it will be better to implement this functionality using JS.
+
+The JS script used first has variables, which correspond to the hamburger icon and item container containing the menu items. We then create a timer variable which will be used to handle timeout. I created event listeners for mouseover and mouseout events for both elements - the item container and the menu icon, so 4 event listeners total. These event listeners then add or remove the visible name from the class text, which has seperate visibility properties, from the appropriate elements, based on mouseout or mouseover. The fade effect works because of the setTimeout functon, which schedules the change of the attribute, this gives time for the fade ease attribute to play out, before the elements are made invisible.
+
+Now that the menu was fully functional, we need to build out the actual pages and their content.

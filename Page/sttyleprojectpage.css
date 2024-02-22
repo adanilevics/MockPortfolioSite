@@ -1,0 +1,173 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#TopContainer {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+#TitleContainer {
+    padding-left: 30px;
+    width: 90%;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+#MenuContainer {
+    width: 10%;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: ease 0.3s;
+}
+
+.Hamburger:hover div {
+    background-color: gray;
+}
+
+#MainContainer {
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    padding: 60px;
+}
+
+.ItemContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease 0.2s;
+    margin-top: 10%;
+}
+
+.ItemContainer.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ItemContainer div {
+    margin-bottom: 10px;
+}
+
+.ItemContainer a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: ease 0.4s;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.ItemContainer a:hover{
+    color: black;
+    background-color: aqua;
+}
+
+#MainContainer h2{
+    color: white;
+    font-size: 44px;
+    display: grid;
+    place-items: center;
+}
+
+#TitleText{
+    text-align: center;
+    color: white;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.gridBox {
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    padding: 5px;
+    transition: ease 0.8s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.gridBox:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    margin: -10px;
+    background-color: aqua;
+}
+
+.subGridBox {
+    flex: 1;
+    background-color: black;
+    border-color: black;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+    z-index: 0;
+    margin-top: 10%;
+}

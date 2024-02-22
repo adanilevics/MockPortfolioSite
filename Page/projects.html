@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="stylemainpages.css">
+    <script defer src="menu.js"></script>
+    <style>
+
+        #MainContainer {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #Item1, #Item2, #Item3 {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        #Item1 a, #Item2 a, #Item3 a {
+            z-index: 2;
+            text-decoration: none;
+            color: white;
+            transition: ease 0.3s;
+            border-radius: 10px;
+            padding: 10px;
+            display: block;
+            text-align: center;
+            background-color: black;
+            height: 15%;
+        }
+
+        #Item1 a:hover, #Item2 a:hover, #Item3 a:hover {
+            text-decoration: none;
+            background-color: aqua;
+            color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="TopContainer">
+        <div id="TitleContainer">
+            <h1>AD :<br>>Projects</h1>
+        </div>
+        <div id="MenuContainer">
+            <div class="Hamburger" id="Ham">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="ItemContainer">
+                <div class="MenuItem1">
+                    <a href="main.html">Home</a>
+                </div>
+                <div class="MenuItem2">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="MenuItem3">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="MainContainer">
+        <video autoplay loop muted>
+            <source src="background_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="Item1">
+            <a href="projects-cpp.html">
+                <pre>
+ ____                 
+/ ___|     _       _   
+| |      _| |_   _| |_ 
+| |___  |_   _| |_   _|
+\____|    |_|     |_|  
+                </pre>
+            </a>
+        </div>
+        <div id="Item2">
+            <a href="projects-python.html">
+                <pre>
+ ____        _   _                 
+|  _ \ _   _| |_| |__   ___  _ __  
+| |_] | | | | __| '_ \ / _ \| '_ \ 
+|  __/| |_| | |_| | | | (_) | | | |
+|_|    \__, |\__|_| |_|\___/|_| |_|
+       |___/                       
+                  </pre>
+            </a>
+
+        </div>
+        <div id="Item3">
+            <a href="projects-webdev.html">
+                <pre>
+__        __   _       ____             
+\ \      / /__| |__   |  _ \  _____   __
+ \ \ /\ / / _ \ '_ \  | | | |/ _ \ \ / /
+  \ V  V /  __/ |_] | | |_| |  __/\ V / 
+   \_/\_/ \___|_.__/  |____/ \___| \_/  
+                </pre>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

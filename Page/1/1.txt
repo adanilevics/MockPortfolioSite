@@ -1,0 +1,6 @@
+Created the base layout of the page I want as the main page - a skeleton.
+It contains a top and bottom container, the top container will hold the title and menu dropdown, while the bottom container will hold the content of the page.
+
+After the layout of the page was clear and defined, I decided upon a minimalistic black and white theme and applied it using CSS.
+
+To make the page more aesthetic and dynamic, I made the hamburger icon (menu selection icon), fade in and out, this was done using the CSS property, transition ease 0.3s, making any style changes transition over 300ms with an 'ease' effect.

@@ -1,0 +1,8 @@
+I started out by building the projects page, where you can select a category and view the projects related to that category.
+I first thought about using images and maybe some text for the buttons, but to make the page more personal and true to the theme, I decided on ascii art, which in my opinion would be the best of both worlds - a image made from text.
+
+For extra detail I changed the top left corners text, instead of just plain text, I added some symbols in a coding theme, to add some immersion. I also created the pages corresponding to each field of coding, for now I left some placeholder text.
+
+Then I started working on the layout of the Project pages. I created a 3x2 grid, and split each cell into 2, so that each cell can hold an image, and some text, in total creating a 6x2 grid.
+
+Once the boxes were created, I made their selection more dynamic, using the transition ease and margin, scale and z index, I was able to achieve an effect where the selected box becomes enlarged, appearing above any overlapping box.

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="stylearticle.css">
+    <script defer src="menu.js"></script>
+</head>
+<body>
+    <div id="TopContainer">
+        <div id="TitleContainer">
+            <h1>AD :<br>>Projects <br>>Web Dev <br>>Portfolio website</h1>
+        </div>
+        <div id="MenuContainer">
+            <div class="Hamburger" id="Ham">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="ItemContainer">
+                <div class="MenuItem1">
+                    <a href="main.html">Home</a>
+                </div>
+                <div class="MenuItem2">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="MenuItem3">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="MainContainer">
+        <div id="TitleText">
+            <h1>Project: Portfolio website</h1>
+            <article class="content-container">
+                <div class="content-block">
+                    <p>To start, I created the base layout of the page I want as the main page - a skeleton. <br>
+                        It contains a top and bottom container, the top container will hold the title and menu dropdown, while the bottom container will hold the content of the page. <br> <br> <br>
+                        
+                        In the beginning, I colored the different sections of the page for visiblity, but after the layout of the page was clear, defined and I was happy with the layout, I decided upon a minimalistic black and white theme and applied it using CSS.<br> <br> <br>
+
+                        I also applied a font to the page, since the default font would not support the look I was trying to achieve. The menu icon, usually refered to as the hamburger icon, was created by placing 3 divs inside the dedicated container, and defining the div size, color and spacing using CSS, which, with the right CSS properties, creates 3 stacked lines.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="1\MainPageSC.png" alt="Image 1">
+                </div>
+
+                <div class="content-block">
+                    <p>To make the page more aesthetic and dynamic, I made the hamburger icon (menu selection icon), fade in and out, this was done using the CSS property, <code>transition ease 0.3s</code>, making any style changes transition over 300ms with an 'ease' effect. This ease effect works together with the hover of the divs changing color, to achieve a responsive effect.</p>
+                </div>
+                <div class="content-block">
+                    <img src="1\transitiondemo.gif" alt="Image 2">
+                </div>
+
+                <div class="content-block">
+                    <p>After creating the fade effect for the menu icon, I decided to fully finish its functionality. The plan is to create items, which href to the corresponding pages. <br> <br>
+
+                        I created a container which will hold the menu items, so I can manage and style the elements in a more organized way, it also makes the code, at least in my opinion, more organized. <br> <br>
+
+                        For the clicking, then href to another page, inside the divs containing each item, I placed the <code>&lt;a&gt;</code> tag inside, and added text so the user can see which page it will open. <br> <br>
+
+                        I did not define a target, I plan to have the same top container - title and menu box, on each page of the website. <br> <br>
+
+                        For HTML, this is all I need, the rest will be handled by CSS and JS. <br> <br>
+
+                        The CSS that is shown, has the itemContainer and its properties, which include <code>opacity: 0 </code>and <code>visibility:hidden</code>, they will remain invisible until the mouse is in the correct area, to make them visible, I will apply visible to the class name, and CSS will then use that classes properties for the objects.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="2\CodeSC.png" alt="Image 3">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        Once the skeleton of the menu items was built out, I needed to add the fade effect based on the users interaction with the hamburger (menu) icon and the items themselves, and ensure functionality. <br> <br>
+                        This was done using JS, since the menu icon and items are seperate, and share seperate characteristics, like ,menu items will be invisible, then visible, while the hamburger icon will be always visible, it will be better to implement this functionality using JS.<br> <br>
+                        The ham and itemContainer variables are assigned the reference to the HTML element with the ID 'Ham' and selector '.ItemContainer'. While ham and itemContainer are constant variables, the object it refers to (the HTML element) can be manipulated - changing their properties and content. <br> <br>
+                        For the functionality I'm trying to achieve, there are 2 events I care about, when the users mouse is over and on the object (object which dictates when elements are shown), and when the user moves his mouse off the object. <br> <br>
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="2\JSCodeSC.png" alt="Image 4">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        This is the result of the JS and CSS working together, to show and hide the items appropriately. <br> <br>
+                        When the mouse is over the icon, the 'visible' class is added, this class has CSS properties making it visible, while the class without 'visible', is not shown. When the mouse is moved outside either the item container or the icon, after 300ms, the 'visible' class is removed, triggering the transition ease effect and hiding the itemContainer, while giving the ease effect time to finish - 300ms.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="2\MenuItemsDemo.gif" alt="Image 5">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        I also added CSS to make the items more visible, and decided upon another part of the ongoing theme - hovered items will be color aqua, with black text color, since white and aqua make the text very hard to see. I also removed text decoration - the underline hyperlinks have. <br> <br>
+                        The transition to black text and aqua background color is applied with CSS using the :hover functionality, the items themselves have the transition ease property aswell, to make it look more dynamic.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="2\MenuItemsWCSSDemo.gif" alt="Image 6">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        Now the main page was finished, I plan to further add content and decoration to the main page, but before I do that I would like to finish the overall website. That will be left as "finishing touches". <br><br>
+                        For some extra detail I decided that the upper container, which contains the title and the menu selection, will have info displaying the current location of the page, here it is simply "Home".
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\FinishedMainPage.png" alt="Image 7">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        Next, I need to add actual destinations to the buttons of the navigation menu in the top left. I copied the main page html file, and then would fill out each page with the needed content. <br> <br>
+                        Here you can see how the "Contact" page looks, this is how every other page currently looks like.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\contactpagesc.jpg" alt="Image 8">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        I started with the 'Projects' page, since that is the most important part of this website. <br> <br>
+                        First I thought about using images, or images with text, but then I had the idea of having an Image made of text - ASCII art. <br><br>
+                        So I used <a href="https://www.ascii-art-generator.org/", target="_blank">https://www.ascii-art-generator.org/</a> to turn the title text of each selection into ASCII art. While its basically the same as using plain text, I think it gives a nice feel and adds to the page's ongoing theme. <br><br>
+                        To not break the ASCII art, I had to use <code>&lt;pre&gt;</code> tags, which tell the browser that this is preformatted text, and should not be changed. The art is a part of the hyperlinks text. I did have to remove a lot of spaces from the outputted art for it to be centered properly. <br><br>
+                        Then applying simmilar CSS logic that was used everywhere else, I made the borders round, by giving them a radius, used the aqua theme on hover, ect.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\projectspageselectiondemowithcode.gif" alt="Image 9">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        Next, I created a page for each of the categories in which I have projects to display. <br> <br>
+                        I decided on a 2x3 grid, so I created a grid container, which will hold all cells of the large grid, each cell has a hyperlink tag, and inside the tag, theres a grid container, which will contain 2 other cells. So I have a grid, and each cell is a link and a grid, which contains 2 cells - 1 for some text, 1 for an image. <br> <br>
+                        For CSS, I used <code>display: grid;</code> to specifify that the container will use grid layout,<code>grid-template-columns: repeat(2, 1fr);</code> to define the grid with 2 columns of equal width and <code>grid-template-rows: repeat(9, 1fr);</code> to define 9 rows of equal height. I have 9 rows, but only 3 can be seen in the image, I decided to leave some space for future projects, for now they will be empty and invisible. <br><br>
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\BoxLayoutSC.jpg" alt="Image 10">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        Each box of the grid contains 2 sub boxes. These sub boxes are only used for containing the text and image, not for a hyperlink, since the box that contains the 2 sub boxes, is already contained by a hyperlink. <br> <br>
+                        This creates a hyperlink as each cell, which is split into 2 sub boxes for the image and text of that box. <br> <br>
+                        The hyperlink of each cell will lead to the projects page, which explains in detail the creation and functionality of the project.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\gridboxcodeSC.jpg" alt="Image 11">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        Currently the boxes don't do anything, they aren't responsive or serve no function. <br><br>
+                        Using CSS I made the hovered box appear larger, using the <code>&lt;transform:scale(1.1)&gt;</code> property, this is applied to the box when it is hovered, and increases the entire boxes size by 110%. <br><br>
+                        Of course, for a smoother effect and to add some animation to the scaling and color change, I used the transition property. <br> <br>
+                        When the boxes get scaled up, they won't appear on top of other boxes on their own, so I had to use <code>z-index -1</code>, so that the enlarging box appears on top of all other boxes. On hover the z-index changes from -1 to 1.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\boxescodeSC.jpg" alt="Image 12">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        As you can see, this provides a dynamic and responsive feel to the page. The only slight problem with this is that, the z-index gets updated only after the transition effect is complete, so there can be slight overlapping of boxes. <br> <br>
+                        This entire grid setup was copied over the all 3 project selection pages.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\gridhoverdemo.gif" alt="Image 13">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        I then added an image and some text to one of the boxes, and formatted it using CSS. <br> <br>
+                        My current CSS setup should allow further additions to be easier, since the images are placed without distortion inside the subBox, using <code>object-fit:contain</code>.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\boxwithImageAndTextSC.jpg" alt="Image 14">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        And that brings us to where we are now, the "Portfolio website" projects page.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\projectportfoliopageSC.jpg" alt="Image 15">
+                </div>
+                
+                
+                <div class="content-block">
+                    <p>
+                        For the layout, I used a div to contain the title of the project, and an article tag to contain the area where the project would be explained. <br> <br>
+                        Then I used content-block containers, for both the paragraphs and images, they are positioned using CSS - images on the right, text explaining the image on the left. <br><br>
+                        Here I also used the alt attribute, in case an image is missing, then the alternative text will be displayed. I think it's good practice to use that in areas where there will be a lot of images, but currently it's just numbered.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\projectpageCodeSC.jpg" alt="Image 16">
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        The background of the main page (Home) and other pages like the contact page, project selection pages is a bit plain. <br> <br>
+                        To resolve this, I found a free to use video online, and set it as the background of every page, except the actual project pages. <br><br>
+                        This was done using the <code>&lt;video autoplay loop muted&gt;</code> tag, using absolute position, and setting the z-index of the video, and other elements, so the video appears in the background. It also has <code>opacity 0.5</code>, so the video in relation to other elements appears more to be behind them.
+                    </p>
+                </div>
+                <div class="content-block">
+                    <img src="3\addedVid.gif" alt="Image 16" style="width: 100%; height: 100%;">
+                </div>
+
+
+            </article>
+        </div>
+    </div>
+</body>
+</html>
